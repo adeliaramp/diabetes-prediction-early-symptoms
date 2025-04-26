@@ -29,7 +29,7 @@ In this project, I built and compared multiple models to predict diabetes risk *
 
 ## 🗂️ Project Structure
 
-'''
+```
 diabetes-prediction-early-symptoms/
 ├── notebooks/
 │   └── diabetes_prediction_notebook.ipynb
@@ -41,7 +41,7 @@ diabetes-prediction-early-symptoms/
 ├── app.py
 ├── requirements.txt
 └── README.md
-'''
+```
 
 
 
@@ -85,11 +85,6 @@ diabetes-prediction-early-symptoms/
 ---
 
 ## 🌎 App Demo
-
-🚀 **[COMING SOON: Live Streamlit App Link]**
-
-_(You can add this once you deploy it to Streamlit Cloud!)_
-
 In the app:
 - Users input their symptoms
 - Click **Predict**

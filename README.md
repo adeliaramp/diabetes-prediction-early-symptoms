@@ -30,8 +30,19 @@ In this project, I built and compared multiple models to predict diabetes risk *
 ## 🗂️ Project Structure
 
 '''
-diabetes-prediction-early-symptoms/ ├── notebooks/ │ └── diabetes_prediction_notebook.ipynb ├── models/ │ ├── diabetes_model_rf.pkl │ ├── diabetes_model_xgb.pkl │ ├── diabetes_model_logistic.pkl │ └── feature_names.pkl ├── app.py ├── requirements.txt └── README.md
+diabetes-prediction-early-symptoms/
+├── notebooks/
+│   └── diabetes_prediction_notebook.ipynb
+├── models/
+│   ├── diabetes_model_rf.pkl
+│   ├── diabetes_model_xgb.pkl
+│   ├── diabetes_model_logistic.pkl
+│   └── feature_names.pkl
+├── app.py
+├── requirements.txt
+└── README.md
 '''
+
 
 
 ---

@@ -1,119 +1,121 @@
-🩺 Diabetes Prediction from Early Symptoms
-Predicting diabetes risk based on early symptoms using machine learning models.
-This project includes exploratory data analysis (EDA), feature engineering, model comparison, cross-validation with confidence intervals, and an interactive Streamlit web app for real-time predictions.
+# 🩺 Diabetes Prediction from Early Symptoms
 
-📚 Table of Contents
-About the Project
+Predicting diabetes risk based on early symptoms using machine learning models.  
+This project includes **exploratory data analysis (EDA)**, **feature engineering**, **model comparison**, **cross-validation with confidence intervals**, and an interactive **Streamlit web app** for real-time predictions.
 
-Project Structure
+---
 
-Technologies Used
+## 📚 Table of Contents
+- [About the Project](#-about-the-project)
+- [Project Structure](#-project-structure)
+- [Technologies Used](#-technologies-used)
+- [Models Trained](#-models-trained)
+- [Evaluation Metrics](#-evaluation-metrics)
+- [App Demo](#-app-demo)
+- [How to Run the App Locally](#-how-to-run-the-app-locally)
+- [Future Improvements](#-future-improvements)
+- [Contact](#-contact)
 
-Models Trained
+---
 
-Evaluation Metrics
+## 🧠 About the Project
 
-App Demo
-
-How to Run the App Locally
-
-Future Improvements
-
-🧠 About the Project
-Diabetes is a major health concern worldwide.
+Diabetes is a major health concern worldwide.  
 Early detection through symptoms can help in fast diagnosis and early treatment.
 
-In this project, I built and compared multiple models to predict diabetes risk using only early symptoms and demographic data — no lab tests required.
+In this project, I built and compared multiple models to predict diabetes risk **using only early symptoms and demographic data** — no lab tests required.
 
-🗂️ Project Structure
-Copy
-Edit
-diabetes-prediction-early-symptoms/
-├── notebooks/
-│   └── diabetes_prediction_notebook.ipynb
-├── models/
-│   └── diabetes_model_rf.pkl
-│   └── diabetes_model_xgb.pkl
-│   └── diabetes_model_logistic.pkl
-│   └── feature_names.pkl
-├── app.py
-├── requirements.txt
-└── README.md
-🛠️ Technologies Used
-Python
+---
 
-Streamlit
+## 🗂️ Project Structure
 
-Scikit-learn
+'''
+diabetes-prediction-early-symptoms/ ├── notebooks/ │ └── diabetes_prediction_notebook.ipynb ├── models/ │ ├── diabetes_model_rf.pkl │ ├── diabetes_model_xgb.pkl │ ├── diabetes_model_logistic.pkl │ └── feature_names.pkl ├── app.py ├── requirements.txt └── README.md
+'''
 
-XGBoost
 
-Pandas
+---
 
-Matplotlib
+## 🛠️ Technologies Used
+- Python
+- Streamlit
+- Scikit-learn
+- XGBoost
+- Pandas
+- Matplotlib
+- Joblib
 
-Joblib
+---
 
-🤖 Models Trained
+## 🤖 Models Trained
 
-Model	Description
-Logistic Regression	Simple, interpretable baseline model
-Random Forest	High-performance ensemble model
-XGBoost	Gradient-boosted trees model, excellent for tabular data
-✅ Final model selected: Random Forest (highest recall, best cross-validation performance).
+| Model                | Description                                 |
+|:---------------------|:--------------------------------------------|
+| Logistic Regression  | Simple, interpretable baseline model        |
+| Random Forest        | High-performance ensemble model             |
+| XGBoost              | Gradient-boosted trees model, excellent for tabular data |
 
-📊 Evaluation Metrics
+✅ **Final model selected**: Random Forest (highest recall, best cross-validation performance).
 
-Metric	Logistic Regression	Random Forest	XGBoost
-Accuracy	93%	99%	98%
-Precision	98%	100%	100%
-Recall	91%	98%	97%
-F1-Score	94%	99%	98%
-ROC AUC	0.99	1.00	1.00
-CV Accuracy	-	98% ± 3%	97% ± 3%
-95% CI (Accuracy)	-	[95.39%, 99.99%]	[93.98%, 99.48%]
-🌎 App Demo
-🚀 [COMING SOON: Live Streamlit App Link]
-(You can add this once you deploy it to Streamlit Cloud!)
+---
+
+## 📊 Evaluation Metrics
+
+| Metric            | Logistic Regression | Random Forest | XGBoost |
+|:------------------|:---------------------|:--------------|:--------|
+| Accuracy          | 93%                  | 99%           | 98%     |
+| Precision         | 98%                  | 100%          | 100%    |
+| Recall            | 91%                  | 98%           | 97%     |
+| F1-Score          | 94%                  | 99%           | 98%     |
+| ROC AUC           | 0.99                 | 1.00          | 1.00    |
+| CV Accuracy       | -                    | 98% ± 3%      | 97% ± 3%|
+| 95% CI (Accuracy) | -                    | [95.39%, 99.99%] | [93.98%, 99.48%] |
+
+---
+
+## 🌎 App Demo
+
+🚀 **[COMING SOON: Live Streamlit App Link]**
+
+_(You can add this once you deploy it to Streamlit Cloud!)_
 
 In the app:
+- Users input their symptoms
+- Click **Predict**
+- See real-time prediction whether they are likely diabetic
 
-Users input their symptoms
+---
 
-Click Predict
+## ⚙️ How to Run the App Locally
 
-See real-time prediction whether they are likely diabetic
+1. Clone this repository:
+    ```bash
+    git clone https://github.com/yourusername/diabetes-prediction-early-symptoms.git
+    cd diabetes-prediction-early-symptoms
+    ```
 
-⚙️ How to Run the App Locally
-Clone this repository:
+2. Install required packages:
+    ```bash
+    pip install -r requirements.txt
+    ```
 
-bash
-Copy
-Edit
-git clone https://github.com/yourusername/diabetes-prediction-early-symptoms.git
-cd diabetes-prediction-early-symptoms
-Install required packages:
+3. Run the Streamlit app:
+    ```bash
+    streamlit run app.py
+    ```
 
-bash
-Copy
-Edit
-pip install -r requirements.txt
-Run the Streamlit app:
+4. The app will open automatically in your browser at `http://localhost:8501/` 🎯
 
-bash
-Copy
-Edit
-streamlit run app.py
-The app will open in your browser at http://localhost:8501/ 🎯
+---
 
-🚀 Future Improvements
-Deploy the app live on Streamlit Cloud
+## 🚀 Future Improvements
+- Deploy the app live on Streamlit Cloud
+- Add SHAP explainability for more transparent model decisions
+- Expand dataset for broader generalization
+- Enable users to select between Random Forest, XGBoost, and Logistic Regression inside the app
 
-Add SHAP explainability for more transparent model decisions
+---
 
-Expand dataset for broader generalization
+## 📬 Contact
 
-Enable users to select between Random Forest, XGBoost, and Logistic Regression inside the app
-
-📬 Contact
-If you'd like to discuss this project or collaborate, feel free to connect!
+If you'd like to discuss this project or collaborate, feel free to connect! 🚀
